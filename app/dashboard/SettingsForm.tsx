@@ -1,8 +1,8 @@
 'use client'
 
-import { updateSettings } from "./actions"
+import { updateSettings } from "./settings/actions"
 // Usamos useActionState para Next.js 16
-import { useActionState } from "react" 
+import { useActionState } from "react"
 import { useFormStatus } from "react-dom"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -26,14 +26,14 @@ export default function SettingsForm({ initialData }: SettingsFormProps) {
 
   return (
     <form action={dispatch} className="max-w-4xl mx-auto space-y-8 pb-20">
-      
+
       {/* SECCIÓN 1: PERFIL */}
       <div className="grid gap-6 md:grid-cols-[250px_1fr]">
         <div className="text-sm">
           <h3 className="font-bold text-slate-900 text-lg">Perfil</h3>
           <p className="text-slate-500">Tu información personal.</p>
         </div>
-        
+
         <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
           <div className="space-y-2">
             <Label className="flex items-center gap-2 text-slate-600"><Mail size={16} /> Correo</Label>
