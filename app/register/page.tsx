@@ -62,7 +62,7 @@ function RegisterForm() {
   }
 
   return (
-    <div className="flex-1 flex flex-col justify-center max-w-xl mx-auto w-full space-y-4">
+    <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full space-y-4">
           
       {/* HEADER COMPACTO */}
       <div className="flex flex-col space-y-1 text-center mb-2">
@@ -78,7 +78,7 @@ function RegisterForm() {
       <form action={signup} className="space-y-3">
         
         {/* FILA 1: Nombre y Apellido */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="grid gap-1.5">
             <Label htmlFor="firstName" className="text-xs font-bold text-slate-700">Nombre</Label>
             <div className="relative">
@@ -93,7 +93,7 @@ function RegisterForm() {
         </div>
 
         {/* FILA 2: WhatsApp y Nombre Tienda (Fusionados en una fila para ahorrar espacio) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="grid gap-1.5">
                 <Label htmlFor="phone" className="text-xs font-bold text-slate-700">WhatsApp</Label>
                 <div className="relative">
@@ -150,7 +150,7 @@ function RegisterForm() {
         </div>
 
         {/* FILA 4: Correo y Contraseña (Fusionados para ahorrar espacio) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="grid gap-1.5">
                 <Label htmlFor="email" className="text-xs font-bold text-slate-700">Correo</Label>
                 <div className="relative">
@@ -167,7 +167,7 @@ function RegisterForm() {
             </div>
         </div>
 
-        <Button type="submit" className="w-full h-10 font-bold bg-[#0F172A] hover:bg-slate-800 text-sm mt-1">
+        <Button type="submit" className="w-full h-9 font-bold bg-[#0F172A] hover:bg-slate-800 text-sm mt-1">
           Crear Tienda Gratis
         </Button>
       </form>
